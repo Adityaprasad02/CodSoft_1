@@ -64,7 +64,7 @@ function Footer() {
                     <span className="text-sm text-gray-500 sm:text-center">
                         © 2024 
                         <a href="#" className="hover:underline">
-                             AdityaPrasadShubham
+                             AdityaPrasadSahoo
                         </a>
                         . All Rights Reserved.
                     </span>

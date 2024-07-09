@@ -62,7 +62,7 @@ export default function ProductList() {
     setIsCheckoutPopupVisible(false);
   };
 
-  const discount = parseInt(0.4 * totalPrice);
+  const discount = parseInt(0.6 * totalPrice);
   const Products = [
     {
       id: 1,
@@ -154,7 +154,7 @@ export default function ProductList() {
 
       {/* Cart Toggle Button (Mobile) */}
       <button
-        className="fixed bottom-4 right-4 bg-blue-600 text-white p-2 rounded-full shadow-md lg:hidden z-10"
+        className="fixed bottom-4 left-4 bg-blue-600 text-white p-2 rounded-full shadow-md lg:hidden z-10"
         onClick={toggleCartVisibility}
       >
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" className="w-6 h-6 text-yellow-300">
@@ -163,9 +163,9 @@ export default function ProductList() {
       </button>
 
       {/* Shopping Cart */}
-      <div className={`fixed inset-y-0 right-0 bg-green-100 h-fit shadow-lg p-4 w-64 transform ${isCartVisible ? 'translate-x-0' : 'translate-x-full'} transition-transform lg:relative lg:translate-x-0 lg:w-1/3 xl:w-1/4 lg:flex lg:flex-col lg:h-auto lg:overflow-y-auto z-20`}>
+      <div className={`fixed inset-y-0 right-0 bg-green-100 h-fit shadow-lg p-4 my-14 lg:my-10 w-64 transform ${isCartVisible ? 'translate-x-0' : 'translate-x-full'} transition-transform lg:relative lg:translate-x-0 lg:w-1/3 xl:w-1/4 lg:flex lg:flex-col lg:h-auto lg:overflow-y-auto z-20`}>
         <div className="flex justify-between items-center text-center mb-4">
-          <span className="text-xl text-blue-900 leading-relaxed bg-green-200 w-screen p-2 mt-16">Shopping Cart</span>
+          <span className="text-xl text-blue-900 leading-relaxed bg-green-200 w-screen p-2 mt-4">Shopping Cart</span>
         </div>
         {cart.length === 0 ? (
           <p className="text-center text-gray-600 my-10">Your cart is empty</p>
@@ -204,7 +204,7 @@ export default function ProductList() {
           </div>
           <br />
           <div className="flex justify-between items-center">
-            <span className="text-lg font-medium text-gray-700">Discount Applied<span className='text-red-700'>(40%)</span></span>
+            <span className="text-lg font-medium text-gray-700">Final Price - Discount Applied<span className='text-red-700'>(40%)</span></span>
             <span className="text-xl font-bold text-red-500">Rs.{discount}</span>
           </div>
           <div className="flex justify-center mt-4">
